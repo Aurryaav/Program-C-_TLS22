@@ -1,0 +1,53 @@
+//
+//  main.cpp
+//  Kalkulator sederhana
+//
+//  Created by Aurry aav on 15/09/22.
+//
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+   cout << "Kalkulator sederhana untuk pertambahan, pengurangan, perkalian, pembagian, akar pangkat dua, akar pangkat tiga, dan pangkat" << endl << endl;
+   
+   double x, y, r = 0;
+   char opr;
+   cout << "Input bilangan : ";
+   cin >> x;
+   cout << "Pilih operator (ketik (s) untuk akar pangkat 2, (p) untuk pangkat, atau (c) untuk akar pangkat 3, +, _, *, /) ";
+   cin >> opr;
+   
+   if (opr == 's'){
+       double y = sqrt(x);
+       cout << "Akar pangkat 2 dari bilangan " << x << " adalah "<< y <<endl;
+   } else if (opr == 'p'){
+       cout << "Input bilangan pangkat : ";
+       cin >> y;
+       double r = pow(x, y);
+       cout << "Hasil dari bilangan " << x << " dipangkatkan dengan " << y << " adalah = "<< r <<endl;
+   }  if (opr == 'c'){
+       double r = cbrt (x);
+       cout << "Akar pangkat 3 dari bilangan " << x << " adalah "<< r <<endl;
+   } else if (opr == '+'){
+       cout << "Input bilangan kedua : ";
+       cin >> y;
+       r = x+y;
+   } else if (opr == '-'){
+       cout << "Input bilangan kedua : ";
+       cin >> y;
+       r = x-y;
+   } else if (opr == '*'){
+       cout << "Input bilangan kedua : ";
+       cin >> y;
+       r = x*y;
+   } else if (opr == '/'){
+       cout << "Input bilangan kedua : ";
+       cin >> y;
+       r = x/y;
+   }
+   
+   cout << "=" << r <<endl;
+   return 0;
+}
